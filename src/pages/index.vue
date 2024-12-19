@@ -33,11 +33,11 @@ const options = {
         </div>
       </div>
 
-      <!-- <div class="section">
+      <div class="section">
         <Contributions />
       </div>
 
-      <div class="section">
+      <!-- <div class="section">
         <Contact />
       </div>
 

@@ -11,6 +11,9 @@ import 'uno.css'
 import 'vue-fullpage.js/dist/style.css'
 import VueFullPage from 'vue-fullpage.js'
 
+// github calendar contributions
+import VueCalendarHeatmap from 'vue3-calendar-heatmap'
+
 const app = createApp(App)
 const router = createRouter({
   routes,
@@ -18,4 +21,5 @@ const router = createRouter({
 })
 app.use(router)
 app.use(VueFullPage)
+app.use(VueCalendarHeatmap)
 app.mount('#app')
