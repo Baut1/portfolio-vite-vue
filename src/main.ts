@@ -17,6 +17,10 @@ import VueCalendarHeatmap from 'vue3-calendar-heatmap'
 // rough-notation styling
 import VueRoughNotation from 'vue-rough-notation'
 
+// vue3 vue-typer
+import { Typer } from 'vue3-typer';
+import "vue3-typer/dist/vue-typer.css"
+
 const app = createApp(App)
 const router = createRouter({
   routes,
@@ -26,4 +30,5 @@ app.use(router)
 app.use(VueFullPage)
 app.use(VueCalendarHeatmap)
 app.use(VueRoughNotation)
+app.use(Typer)
 app.mount('#app')
