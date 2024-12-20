@@ -14,6 +14,9 @@ import VueFullPage from 'vue-fullpage.js'
 // github calendar contributions
 import VueCalendarHeatmap from 'vue3-calendar-heatmap'
 
+// rough-notation styling
+import VueRoughNotation from 'vue-rough-notation'
+
 const app = createApp(App)
 const router = createRouter({
   routes,
@@ -22,4 +25,5 @@ const router = createRouter({
 app.use(router)
 app.use(VueFullPage)
 app.use(VueCalendarHeatmap)
+app.use(VueRoughNotation)
 app.mount('#app')

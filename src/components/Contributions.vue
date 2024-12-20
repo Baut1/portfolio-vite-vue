@@ -34,9 +34,8 @@ const getContributions = async () => {
 }
 getContributions()
 
-// Variable reactiva para almacenar el botón activo
-const activeButton = ref('') // Puede ser un valor inicial como 'button1', '', etc.
-// Función para manejar el clic en los botones
+// active year button to show
+const activeButton = ref('')
 const handleButtonClick = (btnId: string) => {
   activeButton.value = btnId
 }

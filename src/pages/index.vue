@@ -37,11 +37,11 @@ const options = {
         <Contributions />
       </div>
 
-      <!-- <div class="section">
+      <div class="section">
         <Contact />
       </div>
 
-      <div class="section">
+      <!-- <div class="section">
         <Education />
       </div> -->
     </full-page>

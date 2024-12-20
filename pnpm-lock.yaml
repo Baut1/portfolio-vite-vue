@@ -20,6 +20,9 @@ importers:
       vue-fullpage.js:
         specifier: ^0.2.20
         version: 0.2.20(vue@3.5.3(typescript@5.5.4))
+      vue-rough-notation:
+        specifier: ^1.0.4
+        version: 1.0.4(vue@3.5.3(typescript@5.5.4))
       vue-router:
         specifier: ^4.4.3
         version: 4.4.3(vue@3.5.3(typescript@5.5.4))
@@ -2402,6 +2405,9 @@ packages:
     resolution: {integrity: sha512-bAxsR8BVfj60DWXHE3u30oHzfl4G7khkSuPW+qvpd7jFRHm7dLxOjUk1EHACJ/hxLY8phGJ0YhYHZo7jil7Qdg==}
     engines: {node: '>= 8'}
 
+  mitt@3.0.1:
+    resolution: {integrity: sha512-vKivATfr97l2/QBCYAkXYDbrIWPM2IIKEl7YPhjCvKlG3kE2gm+uBo6nEXK3M5/Ffh/FLpKExzOQ3JJoJGFKBw==}
+
   mkdirp@1.0.4:
     resolution: {integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==}
     engines: {node: '>=10'}
@@ -2745,6 +2751,9 @@ packages:
     resolution: {integrity: sha512-61fXYl/qNVinKmGSTHAZ6Yy8I3YIJC/r2m9feHo6SwVAVcLT5MPwOUFe7EuURA/4m0NR8lXG4BBXuo/IZEsjMg==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
+
+  rough-notation@0.4.0:
+    resolution: {integrity: sha512-hDgn9qMIxWnfY+WWjt30aLMtDHR13H8r/NI3EQNdJiEFAzpklH5nKg4eH/thpxCWTYzyg8ueMsKIfz9MzOBQ4Q==}
 
   rrweb-cssom@0.6.0:
     resolution: {integrity: sha512-APM0Gt1KoXBz0iIkkdB/kfvGOwC4UuJFeG/c+yV7wSc7q96cG/kJ0HiYCnzivD9SB53cLV1MlHFNfOuPaadYSw==}
@@ -3282,6 +3291,15 @@ packages:
     resolution: {integrity: sha512-AuO3CwacU5IMKnr3fs1Qr6LFOfmMlWOZExEXRajs2Y6/T6VIKxO4rZFtj6LU9+5rsI2wWABlW1TXGxMdOg073Q==}
     peerDependencies:
       vue: ^3.2.26
+
+  vue-rough-notation@1.0.4:
+    resolution: {integrity: sha512-dGKSpqvYhB061SBx1Rcz/azZ3nDBjdOv1rXuzGbUdF0K8y7+PW+8Di0DTY886HNg/D1ix+qSDUuyumjEi5g4ZA==}
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^2.0.0 || >=3.0.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
 
   vue-router@4.4.3:
     resolution: {integrity: sha512-sv6wmNKx2j3aqJQDMxLFzs/u/mjA9Z5LCgy6BE0f7yFWMjrPLnS/sPNn8ARY/FXw6byV18EFutn5lTO6+UsV5A==}
@@ -5992,6 +6010,8 @@ snapshots:
       minipass: 3.3.6
       yallist: 4.0.0
 
+  mitt@3.0.1: {}
+
   mkdirp@1.0.4: {}
 
   mlly@1.7.1:
@@ -6377,6 +6397,8 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.28.1
       fsevents: 2.3.3
     optional: true
+
+  rough-notation@0.4.0: {}
 
   rrweb-cssom@0.6.0: {}
 
@@ -6980,6 +7002,13 @@ snapshots:
     dependencies:
       fullpage.js: 4.0.30
       vue: 3.5.3(typescript@5.5.4)
+
+  vue-rough-notation@1.0.4(vue@3.5.3(typescript@5.5.4)):
+    dependencies:
+      mitt: 3.0.1
+      rough-notation: 0.4.0
+      vue: 3.5.3(typescript@5.5.4)
+      vue-demi: 0.14.10(vue@3.5.3(typescript@5.5.4))
 
   vue-router@4.4.3(vue@3.5.3(typescript@5.5.4)):
     dependencies:
