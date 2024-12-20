@@ -7,7 +7,7 @@
     if (route.hash === '#contact') {
         setTimeout(() => {
         showAnnotation.value = true
-        }, 800)
+        }, 1000)
     } else {
         showAnnotation.value = false
     }
@@ -81,7 +81,7 @@
                         color="blue">
                         App de alojamiento</a>.
                     Estas aplicaciones demuestran mi habilidad para escribir
-                    <RoughNotation type="highlight" order="2" color="#ffd54f" color-black multiline="true">
+                    <RoughNotation type="highlight" order="2" :multiline=true color="#ffd54f" color-black>
                         código limpio, eficiente y bien documentado
                     </RoughNotation>, así como mi habilidad para crear interfaces amigables para el usuario.
                 </p>
@@ -89,8 +89,14 @@
                     <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer" color="blue">TypeScript</a>,
                     <a href="https://angular.io/" target="_blank" rel="noreferrer" color="blue">Angular</a>,
                     <a href="https://react.dev/" target="_blank" rel="noreferrer" color="blue">React</a>,
-                    <a href="https://nodejs.org/" target="_blank" rel="noreferrer" color="blue">Node</a>,
-                    entre otros. También creo en el aprendizaje continuo y estoy buscando nuevos desafíos y oportunidades para ampliar mis conocimientos. Si tienes preguntas o deseas discutir oportunidades de colaboración, por favor no dudes en contactarme.
+                    <a href="https://nodejs.org/" target="_blank" rel="noreferrer" color="blue">Node</a>
+                    , entre otros. También creo en el aprendizaje continuo y estoy buscando nuevos desafíos y oportunidades para ampliar mis conocimientos. Si tienes preguntas o deseas discutir oportunidades de colaboración, por favor no dudes en
+                    <RoughNotation type="underline" order="4" color="#ff0000">contactarme.</RoughNotation>
+                    <!-- <VueTyper text='Si tienes preguntas o deseas discutir oportunidades de colaboración, por favor no dudes en contactarme.'
+                        :repeat='0'
+                        :pre-type-delay='0'
+                        :type-delay='40'
+                        ></VueTyper> -->
                 </p>
             </RoughNotationGroup>
 
@@ -108,6 +114,14 @@
     font-size: 0.6rem !important;
 }
 
+/* .vue-typer {
+    .char.typed {
+        color: #ffffff;
+    }
+    .caret.typing {
+        background-color: #ffffff;
+    }
+} */
 
 @media (min-width: 700px) {
     .main-container {
