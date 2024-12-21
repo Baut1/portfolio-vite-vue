@@ -10,7 +10,7 @@ declare module 'vue' {
     Contact: typeof import('./src/components/Contact.vue')['default']
     Contributions: typeof import('./src/components/Contributions.vue')['default']
     Education: typeof import('./src/components/Education.vue')['default']
-    GoalProgessBar: typeof import('./src/components/GoalProgessBar.vue')['default']
+    GoalProgressBar: typeof import('./src/components/GoalProgressBar.vue')['default']
     ProjectsCarousel: typeof import('./src/components/ProjectsCarousel.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

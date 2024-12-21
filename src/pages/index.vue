@@ -7,9 +7,17 @@ defineOptions({
 
 const options = {
         licenseKey: 'gplv3-license',
-        anchors: ['home', 'projects', 'contributions', 'contact', 'education'],
+        anchors: ['home',
+        'projects',
+        'contributions',
+        'contact',
+        'education'],
         navigation: true,
-        navigationTooltips: ['Home', 'Projects', 'Contributions', 'Contact', 'Education'],
+        navigationTooltips: ['Home',
+        'Projects',
+        'Contributions',
+        'Contact',
+        'Education'],
         credits: { enabled: false },
 }
 </script>
@@ -41,9 +49,9 @@ const options = {
         <Contact />
       </div>
 
-      <!-- <div class="section">
+      <div class="section">
         <Education />
-      </div> -->
+      </div>
     </full-page>
   </div>
 </template>
