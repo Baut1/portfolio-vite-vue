@@ -20,6 +20,9 @@ importers:
       vue-fullpage.js:
         specifier: ^0.2.20
         version: 0.2.20(vue@3.5.3(typescript@5.5.4))
+      vue-kinesis:
+        specifier: ^2.0.5
+        version: 2.0.5(vue@3.5.3(typescript@5.5.4))
       vue-rough-notation:
         specifier: ^1.0.4
         version: 1.0.4(vue@3.5.3(typescript@5.5.4))
@@ -3288,6 +3291,12 @@ packages:
     resolution: {integrity: sha512-AuO3CwacU5IMKnr3fs1Qr6LFOfmMlWOZExEXRajs2Y6/T6VIKxO4rZFtj6LU9+5rsI2wWABlW1TXGxMdOg073Q==}
     peerDependencies:
       vue: ^3.2.26
+
+  vue-kinesis@2.0.5:
+    resolution: {integrity: sha512-uO2lG9A/L4I9KvyJuUzAkAWqd37In/kWxQ6rZ3/heJZ8+7rHAbBO5Knz6xG+cpO+9Q4cYurxXsPfWM6e7X9E3Q==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      vue: ^3.0.0
 
   vue-rough-notation@1.0.4:
     resolution: {integrity: sha512-dGKSpqvYhB061SBx1Rcz/azZ3nDBjdOv1rXuzGbUdF0K8y7+PW+8Di0DTY886HNg/D1ix+qSDUuyumjEi5g4ZA==}
@@ -7001,6 +7010,10 @@ snapshots:
   vue-fullpage.js@0.2.20(vue@3.5.3(typescript@5.5.4)):
     dependencies:
       fullpage.js: 4.0.30
+      vue: 3.5.3(typescript@5.5.4)
+
+  vue-kinesis@2.0.5(vue@3.5.3(typescript@5.5.4)):
+    dependencies:
       vue: 3.5.3(typescript@5.5.4)
 
   vue-rough-notation@1.0.4(vue@3.5.3(typescript@5.5.4)):

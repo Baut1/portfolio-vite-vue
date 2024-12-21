@@ -21,6 +21,9 @@ import VueRoughNotation from 'vue-rough-notation'
 import { Typer } from 'vue3-typer';
 import "vue3-typer/dist/vue-typer.css"
 
+// vuekinesis
+import VueKinesis from "vue-kinesis";
+
 const app = createApp(App)
 const router = createRouter({
   routes,
@@ -31,4 +34,5 @@ app.use(VueFullPage)
 app.use(VueCalendarHeatmap)
 app.use(VueRoughNotation)
 app.use(Typer)
+app.use(VueKinesis);
 app.mount('#app')
