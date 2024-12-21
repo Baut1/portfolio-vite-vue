@@ -55,18 +55,18 @@ const handleButtonClick = (btnId: string) => {
       <div flex flex-col>
 
         <n-button-group size="large" justify-center pb-6>
-            <n-button round
-                @click="handleButtonClick('2024')">
-                2024
-            </n-button>
-            <n-button
-                @click="handleButtonClick('2023')">
-                2023
-            </n-button>
-            <n-button round
-                @click="handleButtonClick('2022')">
-                2022
-            </n-button>
+          <n-button round
+            @click="handleButtonClick('2022')">
+            2022
+          </n-button>
+          <n-button
+            @click="handleButtonClick('2023')">
+            2023
+          </n-button>
+          <n-button round
+            @click="handleButtonClick('2024')">
+            2024
+          </n-button>
         </n-button-group>
 
         <calendar-heatmap v-if="activeButton === '2024'"

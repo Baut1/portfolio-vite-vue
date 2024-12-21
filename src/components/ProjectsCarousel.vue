@@ -145,6 +145,10 @@ const handleClose = () => helpVisibility.value = false
   transform: rotateY(0) scale(1);
 }
 
+.carousel__pagination {
+  display: none;
+}
+
 .not-selectable {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
