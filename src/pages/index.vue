@@ -9,13 +9,13 @@ const options = {
         licenseKey: 'gplv3-license',
         anchors: ['home',
         'projects',
-        'contributions',
+        // 'contributions',
         'contact',
         'education'],
         navigation: true,
         navigationTooltips: ['Home',
         'Projects',
-        'Contributions',
+        // 'Contributions',
         'Contact',
         'Education'],
         credits: { enabled: false },
@@ -41,9 +41,9 @@ const options = {
         </div>
       </div>
 
-      <div class="section">
+      <!-- <div class="section">
         <Contributions />
-      </div>
+      </div> -->
 
       <div class="section">
         <Contact />
