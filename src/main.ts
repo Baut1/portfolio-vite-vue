@@ -24,6 +24,10 @@ import "vue3-typer/dist/vue-typer.css"
 // vuekinesis
 import VueKinesis from "vue-kinesis";
 
+// mouse effects
+import Tetikus from '@namchee/tetikus';
+import '@namchee/tetikus/dist/tetikus.css';
+
 const app = createApp(App)
 const router = createRouter({
   routes,
@@ -35,4 +39,5 @@ app.use(VueCalendarHeatmap)
 app.use(VueRoughNotation)
 app.use(Typer)
 app.use(VueKinesis);
+app.use(Tetikus);
 app.mount('#app')
