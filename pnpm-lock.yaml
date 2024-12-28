@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@namchee/tetikus':
+        specifier: ^0.4.2
+        version: 0.4.2(vue@3.5.3(typescript@5.5.4))
       '@vueuse/core':
         specifier: ^11.0.3
         version: 11.0.3(vue@3.5.3(typescript@5.5.4))
@@ -486,6 +489,11 @@ packages:
 
   '@juggle/resize-observer@3.4.0':
     resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
+
+  '@namchee/tetikus@0.4.2':
+    resolution: {integrity: sha512-YCz0zp2j+3x48lQqSft/Yse1fti8+NyrcB1XAPPQa8tpjEvrdiSSb5Rx5CQlRQtbPlvmYp4JmbsNA5EOO1D9+A==}
+    peerDependencies:
+      vue: ^3.0.0
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -3769,6 +3777,10 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.5.0
 
   '@juggle/resize-observer@3.4.0': {}
+
+  '@namchee/tetikus@0.4.2(vue@3.5.3(typescript@5.5.4))':
+    dependencies:
+      vue: 3.5.3(typescript@5.5.4)
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
