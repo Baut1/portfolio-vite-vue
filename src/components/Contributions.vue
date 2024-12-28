@@ -19,7 +19,7 @@ previousDate.setFullYear(previousDate.getFullYear() - 2)
 const endDate3 = previousDate.toISOString().split('T')[0]
 
 // color schemes
-const darkRange = ['#1f1f22', '#333333', '#1d466c', '#1d5689', '#1d69ac', '#1B95D1']
+const darkRange = ['#1f1f22', '#333333', '#003f73', '#005a91', '#0077b1', '#1b95d1']
 const lightRange = ['#f5f7fa', '#eeeeee', '#c0ddf9', '#73b3f3', '#3886e1', '#17459e']
 let colorRange = darkRange
 // check which color scheme to use
@@ -39,8 +39,6 @@ const activeButton = ref('')
 const handleButtonClick = (btnId: string) => {
   activeButton.value = btnId
 }
-
-
 </script>
 
 <template>
@@ -74,7 +72,8 @@ const handleButtonClick = (btnId: string) => {
           :end-date="endDate"
           :values="contributions"
           :range-color="colorRange"
-          :round="1"
+          round=1
+          max=6
           w-4xl
           flex
         />
@@ -83,7 +82,8 @@ const handleButtonClick = (btnId: string) => {
           :end-date="endDate2"
           :values="contributions"
           :range-color="colorRange"
-          :round="1"
+          round=1
+          max=6
           w-4xl
           flex
         />
@@ -92,7 +92,8 @@ const handleButtonClick = (btnId: string) => {
           :end-date="endDate3"
           :values="contributions"
           :range-color="colorRange"
-          :round="1"
+          round=1
+          max=3
           w-4xl
           flex
         />
