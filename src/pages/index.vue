@@ -46,11 +46,11 @@ const options = {
       </div> -->
 
       <div class="section">
-        <Contact />
+        <Education />
       </div>
 
       <div class="section">
-        <Education />
+        <Contact />
       </div>
     </full-page>
   </div>
