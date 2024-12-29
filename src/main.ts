@@ -11,6 +11,10 @@ import 'uno.css'
 import 'vue-fullpage.js/dist/style.css'
 import VueFullPage from 'vue-fullpage.js'
 
+// mouse effects
+import Tetikus from '@namchee/tetikus';
+import '@namchee/tetikus/dist/tetikus.css';
+
 // github calendar contributions
 import VueCalendarHeatmap from 'vue3-calendar-heatmap'
 
@@ -24,10 +28,6 @@ import "vue3-typer/dist/vue-typer.css"
 // vuekinesis
 import VueKinesis from "vue-kinesis";
 
-// mouse effects
-import Tetikus from '@namchee/tetikus';
-import '@namchee/tetikus/dist/tetikus.css';
-
 const app = createApp(App)
 const router = createRouter({
   routes,
@@ -35,9 +35,9 @@ const router = createRouter({
 })
 app.use(router)
 app.use(VueFullPage)
+app.use(Tetikus);
 app.use(VueCalendarHeatmap)
 app.use(VueRoughNotation)
 app.use(Typer)
 app.use(VueKinesis);
-app.use(Tetikus);
 app.mount('#app')
