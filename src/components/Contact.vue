@@ -100,6 +100,7 @@
                 </p>
             </RoughNotationGroup>
 
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 w-[2px] h-[25vh] bg-white"></div>
         </div>
     </div>
 </template>
