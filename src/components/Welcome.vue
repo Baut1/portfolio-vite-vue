@@ -29,9 +29,6 @@ const handleClose = () => helpVisibility.value = false
           Desplázate hacia abajo
       </n-tag>
     </div>
-    <div w-xs fixed bottom-4 mx-auto inset-x-0>
-      <!-- <o-alert type="primary" light :description="('Desplazate hacia abajo')" center closable /> -->
-    </div>
     <!-- <o-icon self-center o-primary name="i-carbon-chevron-down" /> -->
   </div>
 
