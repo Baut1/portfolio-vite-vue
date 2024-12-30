@@ -10,14 +10,14 @@ const options = {
         anchors: ['home',
         'projects',
         // 'contributions',
-        'contact',
-        'education'],
+        'education',
+        'contact'],
         navigation: true,
         navigationTooltips: ['Home',
         'Projects',
         // 'Contributions',
-        'Contact',
-        'Education'],
+        'Education',
+        'Contact'],
         credits: { enabled: false },
 }
 </script>
