@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { NButtonGroup, NButton } from 'naive-ui'
+import { NButton, NButtonGroup } from 'naive-ui'
 
+const isDark = useDark()
 const contributions = ref([])
 
 let arrContributions: any = [{ date: '2023-9-22', count: 6 }]
@@ -21,12 +22,11 @@ const endDate3 = previousDate.toISOString().split('T')[0]
 // color schemes
 const darkRange = ['#1f1f22', '#333333', '#003f73', '#005a91', '#0077b1', '#1b95d1']
 const lightRange = ['#f5f7fa', '#eeeeee', '#c0ddf9', '#73b3f3', '#3886e1', '#17459e']
-let colorRange = darkRange
 // check which color scheme to use
-isDark.value ? colorRange = darkRange : colorRange = lightRange
+const colorRange = computed(() => (isDark.value ? darkRange : lightRange))
 
 // api call for contributions list
-const getContributions = async () => {
+async function getContributions() {
   await fetch('https://github-contributions-api.jogruber.de/v4/baut1')
     .then(res => res.json())
     .then(response => arrContributions = response.contributions)
@@ -36,7 +36,7 @@ getContributions()
 
 // active year button to show
 const activeButton = ref('')
-const handleButtonClick = (btnId: string) => {
+function handleButtonClick(btnId: string) {
   activeButton.value = btnId
 }
 </script>
@@ -49,51 +49,58 @@ const handleButtonClick = (btnId: string) => {
     </h2>
 
     <!-- calendars container -->
-    <div flex justify-center mt-6>
+    <div mt-6 flex justify-center>
       <div flex flex-col>
-
-        <n-button-group size="large" justify-center pb-6>
-          <n-button round
-            @click="handleButtonClick('2022')">
+        <NButtonGroup size="large" justify-center pb-6>
+          <NButton
+            round
+            @click="handleButtonClick('2022')"
+          >
             2022
-          </n-button>
-          <n-button
-            @click="handleButtonClick('2023')">
+          </NButton>
+          <NButton
+            @click="handleButtonClick('2023')"
+          >
             2023
-          </n-button>
-          <n-button round
-            @click="handleButtonClick('2024')">
+          </NButton>
+          <NButton
+            round
+            @click="handleButtonClick('2024')"
+          >
             2024
-          </n-button>
-        </n-button-group>
+          </NButton>
+        </NButtonGroup>
 
-        <calendar-heatmap v-if="activeButton === '2024'"
+        <calendar-heatmap
+          v-if="activeButton === '2024'"
           class="calendar"
           :end-date="endDate"
           :values="contributions"
           :range-color="colorRange"
-          round=1
-          max=6
+          round="1"
+          max="6"
           w-4xl
           flex
         />
-        <calendar-heatmap v-if="activeButton === '2023'"
+        <calendar-heatmap
+          v-if="activeButton === '2023'"
           class="calendar"
           :end-date="endDate2"
           :values="contributions"
           :range-color="colorRange"
-          round=1
-          max=6
+          round="1"
+          max="6"
           w-4xl
           flex
         />
-        <calendar-heatmap v-if="activeButton === '2022'"
+        <calendar-heatmap
+          v-if="activeButton === '2022'"
           class="calendar"
           :end-date="endDate3"
           :values="contributions"
           :range-color="colorRange"
-          round=1
-          max=3
+          round="1"
+          max="3"
           w-4xl
           flex
         />
@@ -103,18 +110,30 @@ const handleButtonClick = (btnId: string) => {
 </template>
 
 <style>
-  .calendar {
-    font-size: 0.5rem;
-  }
+  :root {
+  --label-color-light: black;
+  --label-color-dark: white;
+}
 
-  /* months and days label color adjustment */
-  .vch__months__labels__wrapper text,
-  .vch__days__labels__wrapper text {
-    fill: #fefefe;
-  }
+.calendar {
+  font-size: 0.5rem;
+}
 
-  /* hide legend */
-  .vch__legend {
-    display: none;
-  }
+.dark {
+  --label-color: var(--label-color-dark);
+}
+.light {
+  --label-color: var(--label-color-light);
+}
+
+/* months and days label color adjustment */
+.vch__months__labels__wrapper text,
+.vch__days__labels__wrapper text {
+  fill: var(--label-color);
+}
+
+/* hide legend */
+.vch__legend {
+  display: none;
+}
 </style>

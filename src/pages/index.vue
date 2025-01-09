@@ -1,30 +1,22 @@
 <script setup lang="ts" generic="T extends any, O extends any">
-import ProjectsCarousel from '~/components/ProjectsCarousel.vue';
+import ProjectsCarousel from '~/components/ProjectsCarousel.vue'
 
 defineOptions({
   name: 'IndexPage',
 })
 
 const options = {
-        licenseKey: 'gplv3-license',
-        anchors: ['home',
-        'projects',
-        // 'contributions',
-        'education',
-        'contact'],
-        navigation: true,
-        navigationTooltips: ['Home',
-        'Projects',
-        // 'Contributions',
-        'Education',
-        'Contact'],
-        credits: { enabled: false },
+  licenseKey: 'gplv3-license',
+  anchors: ['home', 'projects', 'contributions', 'education', 'contact'],
+  navigation: true,
+  navigationTooltips: ['Home', 'Projects', 'Contributions', 'Education', 'Contact'],
+  credits: { enabled: false },
 }
 </script>
 
 <template>
   <div>
-    <full-page ref="fullpage" :options="options" id="fullpage">
+    <full-page id="fullpage" :options="options">
       <div class="section">
         <Welcome />
       </div>
@@ -34,16 +26,16 @@ const options = {
           <h2 text-5xl font-700>
             Proyectos
           </h2>
-          <h3 text-3 pb-3>
+          <h3 pb-3 text-3>
             Debido a la naturaleza del desarrollo de código abierto colaborativo, es posible que algunos enlaces no esten en funcionamiento
           </h3>
           <ProjectsCarousel />
         </div>
       </div>
 
-      <!-- <div class="section">
+      <div class="section">
         <Contributions />
-      </div> -->
+      </div>
 
       <div class="section">
         <Education />
