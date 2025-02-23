@@ -9,10 +9,10 @@ const progressPercentage = Math.min((elapsedTime / totalDuration) * 100, 100) //
 </script>
 
 <template>
-  <div class="relative w-1/2 mx-auto mb-3 bg-gray-200 rounded-full h-6 overflow-hidden">
+  <div class="relative mx-auto mb-3 h-4 w-1/2 overflow-hidden rounded-full bg-gray-200">
     <!-- Progress bar fill -->
     <div
-      class="bg-blue-500 h-full transition-all duration-300"
+      class="h-full bg-blue-500 transition-all duration-300"
       :style="{ width: `${progressPercentage}%` }"
     />
     <!-- Centered progress text -->

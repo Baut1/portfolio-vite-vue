@@ -5,6 +5,8 @@ import GoalProgressBar from './GoalProgressBar.vue'
 const studyPlanLink = 'https://agenciadeaprendizaje.bue.edu.ar/wp-content/DTS/TS%20Desarrollo%20de%20Software.pdf'
 const campusLink = 'https://ifts16.com/'
 const organizationLink = 'https://agenciadeaprendizaje.bue.edu.ar/curso/tecnicatura-superior-en-desarrollo-de-software/'
+const certificateLinkSkillUp = 'https://drive.google.com/file/d/1G_NeY0K1lN89ZU2CD0_HHmD8GDNDTt3Y/view?usp=sharing'
+const certificateLinkCrisalisBootcamp = 'https://drive.google.com/file/d/1uFnXFUVeR2wb0lWnnS5xUZgBBZi-kEse/view?usp=sharing'
 </script>
 
 <template>
@@ -62,11 +64,39 @@ const organizationLink = 'https://agenciadeaprendizaje.bue.edu.ar/curso/tecnicat
         <kinesis-element :strength="15" w-sm>
           <NCard title="Certificado SkillUp en Angular (2022)" description="Alkemy" hoverable embedded>
             Certificado de formación en Angular, donde se priorizó el trabajo en equipo para crear una aplicacion funcional. El enfoque incluyó el uso avanzado de TypeScript, diseño modular con componentes, integración de servicios y gestión eficiente de rutas.
+
+            <!-- action button -->
+            <template #action>
+              <NButton
+                quaternary
+                type="info"
+                tag="a"
+                :href="certificateLinkSkillUp"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Certificado
+              </NButton>
+            </template>
           </NCard>
         </kinesis-element>
         <kinesis-element :strength="15" w-sm>
           <NCard title="Certificado IT Bootcamp Angular (2023)" description="Finnegans" embedded hoverable>
             Certifica habilidades en el desarrollo de aplicaciones escalables con Angular. Mediante un proyecto colaborativo, se abordaron interfaces interactivas, comunicación entre componentes y arquitecturas eficientes.
+
+            <!-- action button -->
+            <template #action>
+              <NButton
+                quaternary
+                type="info"
+                tag="a"
+                :href="certificateLinkCrisalisBootcamp"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Certificado
+              </NButton>
+            </template>
           </NCard>
         </kinesis-element>
       </div>
