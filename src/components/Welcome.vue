@@ -23,27 +23,30 @@ const handleClose = () => helpVisibility.value = false
       <VueWriter :array="arr" :type-speed="80" :erase-speed="50" />
     </h2>
     <!-- user tip tag -->
-    <div v-if="helpVisibility" fixed inset-x-0 bottom-4 mx-auto w-xs>
-      <NTag
-        type="info"
-        closable
-        @close="handleClose"
-      >
-        Desplázate hacia abajo
-      </NTag>
-    </div>
+    <Transition>
+      <div v-if="helpVisibility" fixed inset-x-0 bottom-4 mx-auto w-xs>
+        <NTag
+          type="info"
+          closable
+          @close="handleClose"
+        >
+          Desplázate hacia abajo
+        </NTag>
+      </div>
+    </Transition>
     <!-- <o-icon self-center o-primary name="i-carbon-chevron-down" /> -->
   </div>
 </template>
 
 <style>
-.is-typed span.cursor {
-  display: inline-block;
-  width: 3px;
-  color: red;
-  animation: blink 1s infinite;
+/* help tip */
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
 }
-.is-typed span.cursor.typing {
-  animation: none;
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 </style>
