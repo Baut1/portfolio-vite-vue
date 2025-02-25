@@ -33,7 +33,7 @@
   },
   {
     "title": "Quick Notes Extension",
-    "imgSrc": "https://lh3.googleusercontent.com/50ltO3Tbs7sKiPVrpUe9up4jCBLHZmblvaiSqqic3XAad1xAwYtPcM-RIAaEzjGqMX5jamz_zDkGFABcu8yJPNki=s1600-w1600-h1000",
+    "imgSrc": "https://i.ibb.co/YTpmxMRp/screenshot.png",
     "content": "Extension chromium para tomar notas rápidas en el navegador.",
     "description": ["JavaScript", "HTML", "CSS"],
     "githubUrl": "https://github.com/Baut1/quick-notes-chrome-extension",

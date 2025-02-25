@@ -26,7 +26,7 @@ const handleClose = () => helpVisibility.value = false
 
 <template>
   <Carousel :items-to-show="1.5" :wrap-around="true" :breakpoints="breakpoints">
-    <Slide v-for="slide in projectsList" :key="slide.title">
+    <Slide v-for="slide in projectsList" :key="slide.title" max-h-md>
       <!-- card container -->
       <div flex flex-col class="carousel__item">
         <!-- card -->
