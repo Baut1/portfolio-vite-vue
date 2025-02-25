@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { NButton, NButtonGroup } from 'naive-ui'
+import { NRadioButton, NRadioGroup } from 'naive-ui'
 
 const isDark = useDark()
 const contributions = ref([])
@@ -34,11 +34,7 @@ async function getContributions() {
 }
 getContributions()
 
-// active year button to show
-const activeButton = ref('')
-function handleButtonClick(btnId: string) {
-  activeButton.value = btnId
-}
+const activeYear = ref() // initialize active year
 </script>
 
 <template>
@@ -51,28 +47,19 @@ function handleButtonClick(btnId: string) {
     <!-- calendars container -->
     <div mt-6 flex justify-center>
       <div flex flex-col>
-        <NButtonGroup size="large" justify-center pb-6>
-          <NButton
-            round
-            @click="handleButtonClick('2022')"
-          >
+        <NRadioGroup v-model:value="activeYear" size="large" mb-9 justify-center>
+          <NRadioButton :value="2022">
             2022
-          </NButton>
-          <NButton
-            @click="handleButtonClick('2023')"
-          >
+          </NRadioButton>
+          <NRadioButton :value="2023">
             2023
-          </NButton>
-          <NButton
-            round
-            @click="handleButtonClick('2024')"
-          >
+          </NRadioButton>
+          <NRadioButton :value="2024">
             2024
-          </NButton>
-        </NButtonGroup>
-
+          </NRadioButton>
+        </NRadioGroup>
         <calendar-heatmap
-          v-if="activeButton === '2024'"
+          v-if="activeYear === 2024"
           class="calendar"
           :end-date="endDate"
           :values="contributions"
@@ -83,7 +70,7 @@ function handleButtonClick(btnId: string) {
           flex
         />
         <calendar-heatmap
-          v-if="activeButton === '2023'"
+          v-else-if="activeYear === 2023"
           class="calendar"
           :end-date="endDate2"
           :values="contributions"
@@ -94,7 +81,7 @@ function handleButtonClick(btnId: string) {
           flex
         />
         <calendar-heatmap
-          v-if="activeButton === '2022'"
+          v-else-if="activeYear === 2022"
           class="calendar"
           :end-date="endDate3"
           :values="contributions"

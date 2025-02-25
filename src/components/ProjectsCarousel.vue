@@ -79,16 +79,18 @@ const handleClose = () => helpVisibility.value = false
     </template>
   </Carousel>
 
-  <!-- user tip tag -->
-  <div v-if="helpVisibility">
-    <NTag
-      type="info"
-      closable
-      @close="handleClose"
-    >
-      Haz click y arrastra
-    </NTag>
-  </div>
+  <Transition>
+    <!-- user tip tag -->
+    <div v-if="helpVisibility">
+      <NTag
+        type="info"
+        closable
+        @close="handleClose"
+      >
+        Haz click y arrastra
+      </NTag>
+    </div>
+  </Transition>
 </template>
 
 <style>
@@ -157,5 +159,16 @@ const handleClose = () => helpVisibility.value = false
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+/* help tip */
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 </style>
