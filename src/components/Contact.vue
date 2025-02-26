@@ -114,7 +114,7 @@ onMounted(() => {
         </p>
       </RoughNotationGroup>
 
-      <div class="absolute left-1/2 top-1/2 h-[25vh] w-[2px] bg-lightblue -translate-x-1/2" />
+      <div class="absolute left-1/2 top-1/2 h-[25vh] w-[2px] bg-teal-600 -translate-x-1/2" />
     </div>
   </div>
 </template>
