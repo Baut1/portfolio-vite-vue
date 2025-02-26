@@ -58,7 +58,7 @@ const handleClose = () => helpVisibility.value = false
                 :href="slide.githubUrl"
                 target="_blank"
               >
-                <i class="i-carbon-logo-github" />
+                <i class="i-carbon-logo-github" me-1 />
                 Repositorio
               </NButton>
               <NButton
@@ -66,7 +66,7 @@ const handleClose = () => helpVisibility.value = false
                 :href="slide.deployUrl"
                 target="_blank"
               >
-                <i class="i-carbon-application-web" />
+                <i class="i-carbon-application-web" me-1 />
                 Deploy
               </NButton>
             </div>
