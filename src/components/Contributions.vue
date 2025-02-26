@@ -43,6 +43,9 @@ const activeYear = ref() // initialize active year
     <h2 text-5xl font-700>
       Contribuciones
     </h2>
+    <h3 pb-3 text-3>
+      Selecciona un año para ver mis contribuciones en GitHub
+    </h3>
 
     <!-- calendars container -->
     <div mt-6 flex justify-center>
