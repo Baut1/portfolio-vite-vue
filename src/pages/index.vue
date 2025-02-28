@@ -33,9 +33,9 @@ const options = {
         </div>
       </div>
 
-      <div class="section">
+      <!-- <div class="section">
         <Contributions />
-      </div>
+      </div> -->
 
       <div class="section">
         <Education />

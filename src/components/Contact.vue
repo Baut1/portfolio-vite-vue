@@ -1,23 +1,27 @@
 <script setup lang="ts">
+import ContactForm from './ContactForm.vue'
 </script>
 
 <template>
   <div h-screen flex flex-col justify-center text-xs font-500 class="main-container">
     <div flex flex-col>
-      <h2 text-5xl font-700>
+      <h2 pb-6 text-5xl font-700>
         Contacto
       </h2>
       <div flex justify-around>
-        <span>
-          <a href="https://www.linkedin.com/in/juanbautistaiglesias/" target="_blank" rel="noreferrer">
-            <img src="/src/assets/linkedin.png" class="btn-link">
-          </a>
-        </span>
-        <span>
-          <a href="https://github.com/Baut1" target="_blank" rel="noreferrer">
-            <img src="/src/assets/github.png" class="btn-link">
-          </a>
-        </span>
+        <div flex flex-col>
+          <span>
+            <a href="https://www.linkedin.com/in/juanbautistaiglesias/" target="_blank" rel="noreferrer">
+              <img src="/src/assets/linkedin.png" class="btn-link">
+            </a>
+          </span>
+          <span>
+            <a href="https://github.com/Baut1" target="_blank" rel="noreferrer">
+              <img src="/src/assets/github.png" class="btn-link">
+            </a>
+          </span>
+        </div>
+        <ContactForm />
       </div>
     </div>
   </div>
