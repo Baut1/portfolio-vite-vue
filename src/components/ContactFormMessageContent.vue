@@ -32,8 +32,7 @@ async function submitForm() {
     form.value = { name: '', email: '', message: '' } // Reset form
   }
   catch (error) {
-    message.error('Error al enviar el mensaje')
-    console.error('Error:', error)
+    message.error(`Error al enviar el mensaje: ${JSON.stringify(error)}`)
   }
   finally {
     loading.value = false
