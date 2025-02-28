@@ -12,6 +12,14 @@ const form = ref({
 const loading = ref(false)
 const message = useMessage()
 
+const emailRegex = /^[\w.-]+@[a-z0-9.-]+\.[a-z]{2,6}$/i
+
+function validateEmail() {
+  if (!emailRegex.test(form.value.email)) {
+    message.warning('Correo electrónico no válido')
+  }
+}
+
 async function submitForm() {
   if (!form.value.name || !form.value.email || !form.value.message) {
     message.warning('Todos los campos son obligatorios')
@@ -41,17 +49,32 @@ async function submitForm() {
 </script>
 
 <template>
-  <NForm @submit.prevent="submitForm">
+  <NForm max-w-xs @submit.prevent="submitForm">
     <NFormItem label="Nombre">
-      <NInput v-model:value="form.name" placeholder="Tu nombre" />
+      <NInput v-model:value="form.name" placeholder="Tu nombre" maxlength="30" />
     </NFormItem>
 
     <NFormItem label="Correo Electrónico">
-      <NInput v-model:value="form.email" placeholder="tucorreo@email.com" />
+      <NInput
+        v-model:value="form.email"
+        placeholder="tucorreo@email.com"
+        maxlength="35"
+
+        @blur="validateEmail"
+      />
     </NFormItem>
 
     <NFormItem label="Mensaje">
-      <NInput v-model:value="form.message" type="textarea" placeholder="Escribe tu mensaje" />
+      <NInput
+        v-model:value="form.message"
+        type="textarea"
+        placeholder="Escribe tu mensaje"
+        maxlength="256"
+        show-count
+        :autosize="{
+          minRows: 3,
+        }"
+      />
     </NFormItem>
 
     <NButton :loading="loading" block attr-type="submit">
