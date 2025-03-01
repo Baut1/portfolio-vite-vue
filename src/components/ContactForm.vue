@@ -5,7 +5,7 @@ import ContactFormMessageContent from './ContactFormMessageContent.vue'
 
 <template>
   <NMessageProvider>
-    <NCard title="Contáctame" w-auto>
+    <NCard embedded hoverable w-xs>
       <ContactFormMessageContent />
     </NCard>
   </NMessageProvider>

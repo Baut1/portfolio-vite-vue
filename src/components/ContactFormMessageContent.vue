@@ -59,7 +59,6 @@ async function submitForm() {
         v-model:value="form.email"
         placeholder="tucorreo@email.com"
         maxlength="35"
-
         @blur="validateEmail"
       />
     </NFormItem>
