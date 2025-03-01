@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@emailjs/browser':
+        specifier: ^4.4.1
+        version: 4.4.1
       '@namchee/tetikus':
         specifier: ^0.4.2
         version: 0.4.2(vue@3.5.3(typescript@5.5.4))
@@ -32,6 +35,9 @@ importers:
       vue-router:
         specifier: ^4.4.3
         version: 4.4.3(vue@3.5.3(typescript@5.5.4))
+      vue-writer:
+        specifier: ^2.0.2
+        version: 2.0.2(vue@3.5.3(typescript@5.5.4))
       vue3-calendar-heatmap:
         specifier: ^2.0.5
         version: 2.0.5(tippy.js@6.3.7)(vue@3.5.3(typescript@5.5.4))
@@ -252,6 +258,10 @@ packages:
 
   '@dprint/toml@0.6.2':
     resolution: {integrity: sha512-Mk5unEANsL/L+WHYU3NpDXt1ARU5bNU5k5OZELxaJodDycKG6RoRnSlZXpW6+7UN2PSnETAFVUdKrh937ZwtHA==}
+
+  '@emailjs/browser@4.4.1':
+    resolution: {integrity: sha512-DGSlP9sPvyFba3to2A50kDtZ+pXVp/0rhmqs2LmbMS3I5J8FSOgLwzY2Xb4qfKlOVHh29EAutLYwe5yuEZmEFg==}
+    engines: {node: '>=14.0.0'}
 
   '@emotion/hash@0.8.0':
     resolution: {integrity: sha512-kBJtf7PH6aWwZ6fka3zQ0p6SBYzx4fl1LoZXE2RrnYST9Xljm7WfKJrU4g/Xr3Beg72MLrp1AWNUmuYJTL7Cow==}
@@ -3326,6 +3336,12 @@ packages:
     peerDependencies:
       typescript: '>=5.0.0'
 
+  vue-writer@2.0.2:
+    resolution: {integrity: sha512-k3Zos5f86REHoY6XRGjEHArUsd7EjUAUu0ehpPWnkHzbc9nPmzboZfw3PmPe9thN8L/QAJve69rHcUU+llFM/g==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      vue: ^3.4.21
+
   vue3-calendar-heatmap@2.0.5:
     resolution: {integrity: sha512-qvveNQlTS5Aw7AvRLs0zOyu3uP5iGJlXJAnkrkG2ElDdyQ8H1TJhQ8rL702CROjAg16ezIveUY10nCO7lqZ25w==}
     engines: {node: '>=16'}
@@ -3589,6 +3605,8 @@ snapshots:
   '@dprint/markdown@0.17.1': {}
 
   '@dprint/toml@0.6.2': {}
+
+  '@emailjs/browser@4.4.1': {}
 
   '@emotion/hash@0.8.0': {}
 
@@ -7046,6 +7064,10 @@ snapshots:
       '@vue/language-core': 2.1.6(typescript@5.5.4)
       semver: 7.6.3
       typescript: 5.5.4
+
+  vue-writer@2.0.2(vue@3.5.3(typescript@5.5.4)):
+    dependencies:
+      vue: 3.5.3(typescript@5.5.4)
 
   vue3-calendar-heatmap@2.0.5(tippy.js@6.3.7)(vue@3.5.3(typescript@5.5.4)):
     dependencies:

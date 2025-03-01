@@ -1,58 +1,74 @@
 [
-    {
-        "title": "Alkybank",
-        "imgSrc": "https://i.ibb.co/sgbrqNH/alkybank.png",
-        "content": "E-Wallet que integra el Homebanking de los clientes de AlkyBank",
-        "description": ["Angular", "Typescript", "Angular Material"],
-        "githubUrl": "https://github.com/Baut1/Bootcamp-Crisalis-Finnegans",
-        "deployUrl": "https://angular-deploy-ng-wallers.vercel.app/login"
-    },
-    {
-        "title": "Veride",
-        "imgSrc": "https://i.ibb.co/j4trk7S/veride.png",
-        "content": "Restaurante e-commerce que ofrece platos vegetarianos saludables.",
-        "description": ["React", "JavaScript", "Sass"],
-        "githubUrl": "https://github.com/No-Country/C4-30-front",
-        "deployUrl": "https://veride.netlify.app/"
-    },
-    {
-        "title": "Clinica Seprise",
-        "imgSrc": "https://i.ibb.co/TWMQFGC/clinica-seprise.png",
-        "content": "Clinica medica que ofrece servicios médicos a sus pacientes como solicitud de turnos, pagos, y comodidad de los pacientes",
-        "description": ["Android Studio", "Kotlin", "Material 3"],
-        "githubUrl": "https://github.com/Baut1/Clinica-Seprise",
-        "deployUrl": "https://developer.android.com/studio"
-    },
-    {
-        "title": "Share",
-        "imgSrc": "https://i.ibb.co/h7Hcf9H/share.png",
-        "content": "Alquiler de departamentos y habitaciones para estudiantes y turistas.",
-        "description": ["Angular", "TypeScript", "Sass"],
-        "githubUrl": "https://github.com/No-Country/s3-03-t-front",
-        "deployUrl": "https://share-your-room.herokuapp.com/"
-    },
-    {
-        "title": "FileTrack",
-        "imgSrc": "https://camo.githubusercontent.com/796e6258d07dbccf586c6263acd6dbf4d0d588f57b4b9499edab11abb7f2f6d1/68747470733a2f2f692e6962622e636f2f4e317a6d5672792f446973652d6f2d73696e2d742d74756c6f2d312e706e67",
-        "content": "Aplicación de escritorio para gestionar registros de trámites con agencia gubernamental.",
-        "description": ["Tkinter", "Python", "TtkBootstrap"],
-        "githubUrl": "https://github.com/Baut1/FileTrack",
-        "deployUrl": "https://github.com/Baut1/FileTrack"
-    },
-    {
-        "title": "Hermes",
-        "imgSrc": "https://i.ibb.co/YbfThMb/hermes.png",
-        "content": "Servicio online para donar medicamentos.",
-        "description": ["React", "JavaScript", "Bootstrap"],
-        "githubUrl": "https://github.com/No-Country/s4-02-t-python-frontend",
-        "deployUrl": "https://s4-02-t-python-frontend-n2k5b3mav-s4-02-t-python-frontend.vercel.app/"
-    },
-    {
-        "title": "Portfolio",
-        "imgSrc": "https://i.ibb.co/x8BwkTn/portfolio-proyects.png",
-        "content": "Portfolio web",
-        "description": ["Vue", "TypeScript", "UnoCSS"],
-        "githubUrl": "https://github.com/Baut1/portfolio-vite-vue",
-        "deployUrl": "https://bautistaiglesias.netlify.app/"
-    }
+  {
+    "title": "Alkybank",
+    "imgSrc": "https://i.ibb.co/sgbrqNH/alkybank.png",
+    "content": "E-Wallet que integra el Homebanking de los clientes de AlkyBank",
+    "description": ["Angular", "Typescript", "Angular Material"],
+    "githubUrl": "https://github.com/Baut1/Bootcamp-Crisalis-Finnegans",
+    "deployUrl": "https://angular-deploy-ng-wallers.vercel.app/login"
+  },
+  {
+    "title": "Veride",
+    "imgSrc": "https://i.ibb.co/j4trk7S/veride.png",
+    "content": "Restaurante e-commerce que ofrece platos vegetarianos saludables.",
+    "description": ["React", "JavaScript", "Sass"],
+    "githubUrl": "https://github.com/No-Country/C4-30-front",
+    "deployUrl": "https://veride.netlify.app"
+  },
+  {
+    "title": "DevLabs Challenge",
+    "imgSrc": "https://i.ibb.co/nMQtTMvz/task-list-page-sample.png",
+    "content": "App de lista de tareas Full-Stack con autenticación OAuth y operaciones CRUD.",
+    "description": ["Next.js", "Express", "MongoDB"],
+    "githubUrl": "https://github.com/Baut1/devuniversity-challenge",
+    "deployUrl": "https://devuniversity-challenge.vercel.app"
+  },
+  {
+    "title": "Clinica Seprise",
+    "imgSrc": "https://i.ibb.co/TWMQFGC/clinica-seprise.png",
+    "content": "Clinica medica que ofrece servicios médicos a sus pacientes como solicitud de turnos, pagos, y comodidad de los pacientes",
+    "description": ["Android Studio", "Kotlin", "Material 3"],
+    "githubUrl": "https://github.com/Baut1/Clinica-Seprise",
+    "deployUrl": "https://developer.android.com/studio"
+  },
+  {
+    "title": "Quick Notes Extension",
+    "imgSrc": "https://i.ibb.co/YTpmxMRp/screenshot.png",
+    "content": "Extension chromium para tomar notas rápidas en el navegador.",
+    "description": ["JavaScript", "HTML", "CSS"],
+    "githubUrl": "https://github.com/Baut1/quick-notes-chrome-extension",
+    "deployUrl": "https://chromewebstore.google.com/detail/quick-notes/fcdbinncidhoidcdohcenjdhjlifeaei"
+  },
+  {
+    "title": "Share",
+    "imgSrc": "https://i.ibb.co/h7Hcf9H/share.png",
+    "content": "Alquiler de departamentos y habitaciones para estudiantes y turistas.",
+    "description": ["Angular", "TypeScript", "Sass"],
+    "githubUrl": "https://github.com/No-Country/s3-03-t-front",
+    "deployUrl": "https://share-your-room.herokuapp.com"
+  },
+  {
+    "title": "FileTrack",
+    "imgSrc": "https://camo.githubusercontent.com/796e6258d07dbccf586c6263acd6dbf4d0d588f57b4b9499edab11abb7f2f6d1/68747470733a2f2f692e6962622e636f2f4e317a6d5672792f446973652d6f2d73696e2d742d74756c6f2d312e706e67",
+    "content": "Aplicación de escritorio para gestionar registros de trámites con agencia gubernamental.",
+    "description": ["Tkinter", "Python", "TtkBootstrap"],
+    "githubUrl": "https://github.com/Baut1/FileTrack",
+    "deployUrl": "https://github.com/Baut1/FileTrack"
+  },
+  {
+    "title": "Hermes",
+    "imgSrc": "https://i.ibb.co/YbfThMb/hermes.png",
+    "content": "Servicio online para donar medicamentos.",
+    "description": ["React", "JavaScript", "Bootstrap"],
+    "githubUrl": "https://github.com/No-Country/s4-02-t-python-frontend",
+    "deployUrl": "https://s4-02-t-python-frontend-n2k5b3mav-s4-02-t-python-frontend.vercel.app"
+  },
+  {
+    "title": "Portfolio",
+    "imgSrc": "https://i.ibb.co/x8BwkTn/portfolio-proyects.png",
+    "content": "Mi portfolio personal",
+    "description": ["Vue", "TypeScript", "UnoCSS"],
+    "githubUrl": "https://github.com/Baut1/portfolio-vite-vue",
+    "deployUrl": "https://bautistaiglesias.netlify.app"
+  }
 ]

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import 'vue3-carousel/dist/carousel.css'
+import { NButton, NCard, NTag } from 'naive-ui'
 import { Carousel, Pagination, Slide } from 'vue3-carousel'
 
-import { NCard, NTag, NButton } from 'naive-ui'
-
 import projectsList from '../data/projectsList.json'
+
+import 'vue3-carousel/dist/carousel.css'
 
 // breakpoints
 const breakpoints = {
@@ -22,56 +22,56 @@ const breakpoints = {
 
 const helpVisibility = ref(true)
 const handleClose = () => helpVisibility.value = false
-
 </script>
 
 <template>
   <Carousel :items-to-show="1.5" :wrap-around="true" :breakpoints="breakpoints">
-    <Slide v-for="slide in projectsList" :key="slide.title">
-        
-        <!-- card container -->
-        <div flex flex-col class="carousel__item">
+    <Slide v-for="slide in projectsList" :key="slide.title" max-h-md>
+      <!-- card container -->
+      <div flex flex-col class="carousel__item">
+        <!-- card -->
+        <NCard
+          :title="`${slide.title}`"
+          :segmented="{
+            content: true,
+            action: 'soft',
+          }"
+        >
+          <!-- card cover -->
+          <template #cover>
+            <img :src="`${slide.imgSrc}`">
+          </template>
 
-            <!-- card -->
-            <n-card :title="`${slide.title}`"
-                    :segmented="{
-                        content: true,
-                        action: 'soft'
-                        }">
+          <!-- card tags -->
+          <span v-for="tag in slide.description" :key="tag">
+            <NTag type="info" size="small" round>{{ tag }}</NTag>
+          </span>
 
-                <!-- card cover -->
-                <template #cover>
-                <img :src="`${slide.imgSrc}`">
-                </template>
+          <!-- card content description -->
+          <h2>{{ slide.content }}</h2>
 
-                <!-- card tags -->
-                <span v-for="tag in slide.description">
-                    <n-tag type="info" size="small" round>{{tag}}</n-tag>
-                </span>
-
-                <!-- card content description -->
-                <h2>{{slide.content}}</h2>
-
-                <!-- action buttons -->
-                <template #action>
-                    <div flex flex-justify-around>
-                        <n-button
-                            tag="a"
-                            :href="slide.githubUrl"
-                            target="_blank">
-                            <i class="i-carbon-logo-github"></i>
-                            Repositorio
-                        </n-button>
-                        <n-button
-                            tag="a"
-                            :href="slide.deployUrl"
-                            target="_blank">
-                            <i class="i-carbon-application-web"></i>
-                            Deploy
-                        </n-button>
-                    </div>
-                </template>
-            </n-card>
+          <!-- action buttons -->
+          <template #action>
+            <div flex flex-justify-around>
+              <NButton
+                tag="a"
+                :href="slide.githubUrl"
+                target="_blank"
+              >
+                <i class="i-carbon-logo-github" me-1 />
+                Repositorio
+              </NButton>
+              <NButton
+                tag="a"
+                :href="slide.deployUrl"
+                target="_blank"
+              >
+                <i class="i-carbon-application-web" me-1 />
+                Deploy
+              </NButton>
+            </div>
+          </template>
+        </NCard>
       </div>
     </Slide>
     <template #addons>
@@ -79,15 +79,18 @@ const handleClose = () => helpVisibility.value = false
     </template>
   </Carousel>
 
-  <!-- user tip tag -->
-  <div v-if="helpVisibility">
-    <n-tag
+  <Transition>
+    <!-- user tip tag -->
+    <div v-if="helpVisibility">
+      <NTag
         type="info"
         closable
-        @close="handleClose">
+        @close="handleClose"
+      >
         Haz click y arrastra
-    </n-tag>
-  </div>
+      </NTag>
+    </div>
+  </Transition>
 </template>
 
 <style>
@@ -156,5 +159,16 @@ const handleClose = () => helpVisibility.value = false
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+/* help tip */
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 </style>

@@ -7,7 +7,10 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AboutMe: typeof import('./src/components/AboutMe.vue')['default']
     Contact: typeof import('./src/components/Contact.vue')['default']
+    ContactForm: typeof import('./src/components/ContactForm.vue')['default']
+    ContactFormMessageContent: typeof import('./src/components/ContactFormMessageContent.vue')['default']
     Contributions: typeof import('./src/components/Contributions.vue')['default']
     Education: typeof import('./src/components/Education.vue')['default']
     GoalProgressBar: typeof import('./src/components/GoalProgressBar.vue')['default']
