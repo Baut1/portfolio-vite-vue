@@ -26,11 +26,12 @@ const handleClose = () => helpVisibility.value = false
 
 <template>
   <Carousel :items-to-show="1.5" :wrap-around="true" :breakpoints="breakpoints">
-    <Slide v-for="slide in projectsList" :key="slide.title" max-h-md>
+    <Slide v-for="slide in projectsList" :key="slide.title">
       <!-- card container -->
       <div flex flex-col class="carousel__item">
         <!-- card -->
         <NCard
+          max-h-sm
           :title="`${slide.title}`"
           :segmented="{
             content: true,
