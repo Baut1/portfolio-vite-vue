@@ -17,7 +17,7 @@ const certificateLinkCrisalisBootcamp = 'https://drive.google.com/file/d/1uFnXFU
       </h2>
 
       <div mt-6 flex justify-around>
-        <kinesis-element :strength="12" w-4xl self-center>
+        <kinesis-element :strength="12" w-5xl self-center>
           <NCard title="Técnico superior en desarrollo de software (2023 - 2025)" description="IFTS N° 16 - Ciudad Autónoma de Buenos Aires" hoverable>
             <GoalProgressBar />
             El Técnico Superior en Desarrollo de Software estará capacitado para producir artefactos de software, lo que comprende su diseño detallado, construcción reutilizando elementos existentes o programándolos enteramente, y verificación unitaria, así como su depuración, optimización y mantenimiento. Este técnico podrá desempeñarse en organizaciones de diversos tipos; empresas que realizan desarrollo de software por encargo de organizaciones locales o extranjeras, que proveen software junto con otros servicios de asesoramiento y consultoría, y, en menor número, que desarrollan sus propios productos de software para vender en el país o en el exterior.
@@ -61,7 +61,7 @@ const certificateLinkCrisalisBootcamp = 'https://drive.google.com/file/d/1uFnXFU
       </div>
 
       <div mt-6 flex justify-center gap-x-12>
-        <kinesis-element :strength="15" w-sm>
+        <kinesis-element :strength="15" w-md>
           <NCard title="Certificado SkillUp en Angular (2022)" description="Alkemy" hoverable embedded>
             Certificado de formación en Angular, donde se priorizó el trabajo en equipo para crear una aplicacion funcional. El enfoque incluyó el uso avanzado de TypeScript, diseño modular con componentes, integración de servicios y gestión eficiente de rutas.
 
@@ -80,7 +80,7 @@ const certificateLinkCrisalisBootcamp = 'https://drive.google.com/file/d/1uFnXFU
             </template>
           </NCard>
         </kinesis-element>
-        <kinesis-element :strength="15" w-sm>
+        <kinesis-element :strength="15" w-md>
           <NCard title="Certificado IT Bootcamp Angular (2023)" description="Finnegans" embedded hoverable>
             Certifica habilidades en el desarrollo de aplicaciones escalables con Angular. Mediante un proyecto colaborativo, se abordaron interfaces interactivas, comunicación entre componentes y arquitecturas eficientes.
 
