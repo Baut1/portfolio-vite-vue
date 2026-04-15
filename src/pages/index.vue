@@ -27,7 +27,7 @@ const options = {
             Proyectos
           </h2>
           <h3 pb-3 text-3>
-            Debido a la naturaleza del desarrollo de código abierto colaborativo, es posible que algunos enlaces no esten en funcionamiento
+            *Debido a la naturaleza del desarrollo de código abierto colaborativo, es posible que algunos enlaces no esten en funcionamiento
           </h3>
           <ProjectsCarousel />
         </div>

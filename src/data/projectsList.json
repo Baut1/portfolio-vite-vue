@@ -1,7 +1,15 @@
 [
   {
+    "title": "Adopteros",
+    "imgSrc": "images/adopteros.webp",
+    "content": "Aplicación web para gestionar el catálogo de animales en adopción, publicaciones de noticias y la interacción con usuarios",
+    "description": ["Next.js", "TypeScript", "Tailwind CSS"],
+    "githubUrl": "https://github.com/proyectoDAR/adopteros-front",
+    "deployUrl": "https://adopteros.vercel.app/"
+  },
+  {
     "title": "Alkybank",
-    "imgSrc": "https://i.ibb.co/sgbrqNH/alkybank.png",
+    "imgSrc": "images/alkybank.webp",
     "content": "E-Wallet que integra el Homebanking de los clientes de AlkyBank",
     "description": ["Angular", "Typescript", "Angular Material"],
     "githubUrl": "https://github.com/Baut1/Bootcamp-Crisalis-Finnegans",
@@ -9,7 +17,7 @@
   },
   {
     "title": "Veride",
-    "imgSrc": "https://i.ibb.co/j4trk7S/veride.png",
+    "imgSrc": "images/veride.webp",
     "content": "Restaurante e-commerce que ofrece platos vegetarianos saludables.",
     "description": ["React", "JavaScript", "Sass"],
     "githubUrl": "https://github.com/No-Country/C4-30-front",
@@ -17,7 +25,7 @@
   },
   {
     "title": "DevLabs Challenge",
-    "imgSrc": "https://i.ibb.co/nMQtTMvz/task-list-page-sample.png",
+    "imgSrc": "images/task-list-page-sample.webp",
     "content": "App de lista de tareas Full-Stack con autenticación OAuth y operaciones CRUD.",
     "description": ["Next.js", "Express", "MongoDB"],
     "githubUrl": "https://github.com/Baut1/devuniversity-challenge",
@@ -25,7 +33,7 @@
   },
   {
     "title": "Clinica Seprise",
-    "imgSrc": "https://i.ibb.co/TWMQFGC/clinica-seprise.png",
+    "imgSrc": "images/clinica-seprise.webp",
     "content": "Clinica medica que ofrece servicios médicos a sus pacientes como solicitud de turnos, pagos, y comodidad de los pacientes",
     "description": ["Android Studio", "Kotlin", "Material 3"],
     "githubUrl": "https://github.com/Baut1/Clinica-Seprise",
@@ -33,7 +41,7 @@
   },
   {
     "title": "Quick Notes Extension",
-    "imgSrc": "https://i.ibb.co/YTpmxMRp/screenshot.png",
+    "imgSrc": "images/quick-notes-extension.webp",
     "content": "Extension chromium para tomar notas rápidas en el navegador.",
     "description": ["JavaScript", "HTML", "CSS"],
     "githubUrl": "https://github.com/Baut1/quick-notes-chrome-extension",
@@ -41,7 +49,7 @@
   },
   {
     "title": "Share",
-    "imgSrc": "https://i.ibb.co/h7Hcf9H/share.png",
+    "imgSrc": "images/share.webp",
     "content": "Alquiler de departamentos y habitaciones para estudiantes y turistas.",
     "description": ["Angular", "TypeScript", "Sass"],
     "githubUrl": "https://github.com/No-Country/s3-03-t-front",
@@ -49,7 +57,7 @@
   },
   {
     "title": "FileTrack",
-    "imgSrc": "https://camo.githubusercontent.com/796e6258d07dbccf586c6263acd6dbf4d0d588f57b4b9499edab11abb7f2f6d1/68747470733a2f2f692e6962622e636f2f4e317a6d5672792f446973652d6f2d73696e2d742d74756c6f2d312e706e67",
+    "imgSrc": "images/filetrack.webp",
     "content": "Aplicación de escritorio para gestionar registros de trámites con agencia gubernamental.",
     "description": ["Tkinter", "Python", "TtkBootstrap"],
     "githubUrl": "https://github.com/Baut1/FileTrack",
@@ -57,7 +65,7 @@
   },
   {
     "title": "Hermes",
-    "imgSrc": "https://i.ibb.co/YbfThMb/hermes.png",
+    "imgSrc": "images/hermes.webp",
     "content": "Servicio online para donar medicamentos.",
     "description": ["React", "JavaScript", "Bootstrap"],
     "githubUrl": "https://github.com/No-Country/s4-02-t-python-frontend",
@@ -65,7 +73,7 @@
   },
   {
     "title": "Portfolio",
-    "imgSrc": "https://i.ibb.co/x8BwkTn/portfolio-proyects.png",
+    "imgSrc": "images/portfolio.webp",
     "content": "Mi portfolio personal",
     "description": ["Vue", "TypeScript", "UnoCSS"],
     "githubUrl": "https://github.com/Baut1/portfolio-vite-vue",

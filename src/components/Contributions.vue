@@ -2,22 +2,25 @@
 import { NRadioButton, NRadioGroup } from 'naive-ui'
 
 const isDark = useDark()
-const contributions = ref([])
+interface Contribution {
+  date: string
+  count: number
+}
 
-let arrContributions: any = [{ date: '2023-9-22', count: 6 }]
+const contributions = ref<Contribution[]>([])
 
 // get dates
-const currentDate = new Date()
+const currentYear = new Date().getFullYear()
 
-const endDate = currentDate.toISOString().split('T')[0]
+const years = [currentYear, currentYear - 1, currentYear - 2]
 
-const lastYearDate = new Date(currentDate.valueOf())
-lastYearDate.setFullYear(lastYearDate.getFullYear() - 1)
-const endDate2 = lastYearDate.toISOString().split('T')[0]
+function getEndDateByYear(year: number) {
+  const date = new Date()
+  date.setFullYear(year)
+  return date.toISOString().split('T')[0]
+}
 
-const previousDate = new Date(currentDate.valueOf())
-previousDate.setFullYear(previousDate.getFullYear() - 2)
-const endDate3 = previousDate.toISOString().split('T')[0]
+const activeYear = ref(currentYear)
 
 // color schemes
 const darkRange = ['#1f1f22', '#333333', '#003f73', '#005a91', '#0077b1', '#1b95d1']
@@ -27,14 +30,11 @@ const colorRange = computed(() => (isDark.value ? darkRange : lightRange))
 
 // api call for contributions list
 async function getContributions() {
-  await fetch('https://github-contributions-api.jogruber.de/v4/baut1')
-    .then(res => res.json())
-    .then(response => arrContributions = response.contributions)
-  contributions.value = arrContributions
+  const res = await fetch('https://github-contributions-api.jogruber.de/v4/baut1')
+  const data = await res.json()
+  contributions.value = data.contributions ?? []
 }
 getContributions()
-
-const activeYear = ref() // initialize active year
 </script>
 
 <template>
@@ -51,46 +51,21 @@ const activeYear = ref() // initialize active year
     <div mt-6 flex justify-center>
       <div flex flex-col>
         <NRadioGroup v-model:value="activeYear" size="large" mb-9 justify-center>
-          <NRadioButton :value="2022">
-            2022
-          </NRadioButton>
-          <NRadioButton :value="2023">
-            2023
-          </NRadioButton>
-          <NRadioButton :value="2024">
-            2024
+          <NRadioButton
+            v-for="year in years"
+            :key="year"
+            :value="year"
+          >
+            {{ year }}
           </NRadioButton>
         </NRadioGroup>
         <calendar-heatmap
-          v-if="activeYear === 2024"
+          :key="activeYear"
           class="calendar"
-          :end-date="endDate"
+          :end-date="getEndDateByYear(activeYear)"
           :values="contributions"
           :range-color="colorRange"
-          round="1"
-          max="6"
-          w-4xl
-          flex
-        />
-        <calendar-heatmap
-          v-else-if="activeYear === 2023"
-          class="calendar"
-          :end-date="endDate2"
-          :values="contributions"
-          :range-color="colorRange"
-          round="1"
-          max="6"
-          w-4xl
-          flex
-        />
-        <calendar-heatmap
-          v-else-if="activeYear === 2022"
-          class="calendar"
-          :end-date="endDate3"
-          :values="contributions"
-          :range-color="colorRange"
-          round="1"
-          max="3"
+          :max="activeYear === currentYear - 2 ? 3 : 6"
           w-4xl
           flex
         />
